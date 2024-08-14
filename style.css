@@ -516,6 +516,7 @@ nav a:hover::after {
     line-height: 1.5rem;
     margin-bottom: 1rem;
 }
+
 .multipleimages {
     text-align: center;
     margin: 2rem auto;
@@ -544,10 +545,12 @@ nav a:hover::after {
     margin-bottom: 1rem;
 }
 
-.image-row img:nth-child(4n+1) {
-    margin-left: auto; /* Start each new row on the left */
+/* Media query for smaller screens */
+@media (max-width: 768px) {
+    .image-row img {
+        flex: 1 1 calc(50% - 1rem); /* 50% width minus the gap */
+        max-width: 45%; /* Adjust max width to fit two images per row */
+        margin-bottom: 1rem;
+    }
 }
 
-.image-row img:nth-child(4n) {
-    margin-right: auto; /* End each row on the right */
-}
