@@ -104,7 +104,7 @@ nav a:hover::after {
     transition: background-color 0.3s; 
     height: 3rem;
     width: 10rem;
-    margin-bottom: 3rem;
+    margin-bottom: 5rem;
 }
 
 .poster button:hover {
@@ -121,7 +121,7 @@ nav a:hover::after {
     color: white;
 }
 .poster h1{
-    margin-top: 5rem;
+    margin-top: 8rem;
 }
 .Banner-01 {
     width: 100%; 
@@ -145,7 +145,7 @@ nav a:hover::after {
     align-items: center; 
     gap: 7rem; 
     padding: 20px 0; 
-    background-color: rgb(205, 205, 205); 
+    background-color: white; 
     margin-top: 1rem;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.7); 
     border-radius: 10px; 
@@ -195,7 +195,7 @@ nav a:hover::after {
     flex-wrap: wrap; /* Allow cards to wrap to next line */
   }
   
-  .card {
+  .card1, .card2, .card3 {
     width: 300px;
     height: 400px;
     perspective: 1000px; 
@@ -209,12 +209,26 @@ nav a:hover::after {
     transform-style: preserve-3d;
     position: relative;
 }
-
-.card:hover .card-inner {
+.card1 p{
+    line-height: 2.5rem;
+}
+.card2 p{
+    line-height: 2.5rem;
+}
+.card3 p{
+    line-height: 2.5rem;
+}
+.card1:hover .card-inner {
+    transform: rotateY(180deg);
+}
+.card2:hover .card-inner {
+    transform: rotateY(180deg);
+}
+.card3:hover .card-inner {
     transform: rotateY(180deg);
 }
 
-.card-front, .card-back {
+.card-front, .card-back1 {
     width: 100%;
     height: 100%;
     position: absolute;
@@ -229,16 +243,143 @@ nav a:hover::after {
     border-radius: 10px;
     flex-direction: column;
 }
-
+.card-front, .card-back2 {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    backface-visibility: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: black;
+    font-family: Arial, sans-serif;
+    font-size: 15px;
+    text-align: center;
+    border-radius: 10px;
+    flex-direction: column;
+}
+.card-front, .card-back3 {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    backface-visibility: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: black;
+    font-family: Arial, sans-serif;
+    font-size: 15px;
+    text-align: center;
+    border-radius: 10px;
+    flex-direction: column;
+}
 .card-front {
- 
-  background: linear-gradient(to bottom right , #d1d1d1,#7a7a7a);
+ background: rgba(255, 165, 0, 0.5);
+  /*background: linear-gradient(to bottom right , #d1d1d1,#7a7a7a);*/
    
 }
-
-.card-back {
-    background-color: rgb(255, 160, 122);
+.card .card-back1{
+    background: white;
+}
+.card .card-back2{
+    background: white;
+}
+.card .card-back3{
+    background: white;
+}
+.card-back1 {
+    background-color: rgb(255, 193, 78);
     transform: rotateY(180deg);
+
+}
+.card-back1 button{
+    background-color: black; 
+    color: white; 
+    border: none; 
+    padding: 0.5rem 1rem; 
+    margin: 0.5rem; 
+    font-size: 16px; 
+    border-radius: 5px; 
+    cursor: pointer; 
+    transition: background-color 0.3s; 
+    height: 3rem;
+    width: 10rem;
+    margin-bottom: 2rem;
+}
+.card-back1 button:hover {
+    background-color: grey; 
+}
+
+.card-back1 button a {
+    text-decoration: none; 
+    color: white; 
+    display: block; 
+}
+
+.card-back1 button a:hover {
+    color: white;
+}
+.card-back2 {
+    background-color: rgb(219, 132, 146);
+    transform: rotateY(180deg);
+}
+.card-back2 button{
+    background-color: black; 
+    color: white; 
+    border: none; 
+    padding: 0.5rem 1rem; 
+    margin: 0.5rem; 
+    font-size: 16px; 
+    border-radius: 5px; 
+    cursor: pointer; 
+    transition: background-color 0.3s; 
+    height: 3rem;
+    width: 10rem;
+    margin-bottom: 2rem;
+}
+.card-back2 button:hover {
+    background-color: grey; 
+}
+
+.card-back2 button a {
+    text-decoration: none; 
+    color: white; 
+    display: block; 
+}
+
+.card-back2 button a:hover {
+    color: white;
+}
+.card-back3 {
+    background-color: rgb(239, 239, 82);
+    transform: rotateY(180deg);
+}
+.card-back3 button{
+    background-color: black; 
+    color: white; 
+    border: none; 
+    padding: 0.5rem 1rem; 
+    margin: 0.5rem; 
+    font-size: 16px; 
+    border-radius: 5px; 
+    cursor: pointer; 
+    transition: background-color 0.3s; 
+    height: 3rem;
+    width: 10rem;
+    margin-bottom: 2rem;
+}
+.card-back3 button:hover {
+    background-color: grey; 
+}
+
+.card-back3 button a {
+    text-decoration: none; 
+    color: white; 
+    display: block; 
+}
+
+.card-back3 button a:hover {
+    color: white;
 }
 .card-front img{
     height: 5rem;
@@ -255,33 +396,58 @@ nav a:hover::after {
     }
   }
   .choice {
-    text-align: center; /* Center the text horizontally */
-    margin: 2rem 0; /* Vertical margin to create space above and below */
-    padding: 1rem; /* Add padding around the content */
-    background-color: rgb(67, 65, 65); /* Dark background color */
-    background-size: cover; /* Ensure the background covers the entire area */
-    width: 100%; /* Ensure the background spans the full width */
+    text-align: center;
+    background-color: #111; /* Dark background like in the screenshot */
+    color: white; /* White text color */
+    padding: 2rem;
+    margin-top: 5rem;
 }
 
-.choice h1, .choice ul {
-    max-width: 600px; /* Limit the width of the content */
-    margin: 0 auto; /* Center the content horizontally */
-}
-.choice h1{
-    color: white;
-}
-.choice ul {
-    list-style-type: none; /* Remove default list bullets */
-    padding: 0; /* Remove default padding from the list */
+.choice h1 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    font-weight: bold;
 }
 
-.choice li {
-    font-size: 1.2rem; /* Increase font size of list items */
-    margin: 0.5rem 0; /* Add space between list items */
-    background-color: #f0f0f0; /* Light grey background for list items */
-    padding: 0.5rem 1rem; /* Add padding inside list items */
-    border-radius: 5px; /* Rounded corners for list items */
+.choice-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 2rem;
+    gap: 2rem;
 }
+
+.choice-item {
+    flex: 1 1 300px; /* Each item takes at least 300px and can grow */
+    max-width: 300px; /* Maximum width for each item */
+    text-align: left;
+    padding: 1rem;
+    background-color: #222; /* Slightly lighter background for the cards */
+    border-radius: 10px;
+}
+
+.choice-item h3 {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+}
+
+.choice-item p {
+    font-size: 1rem;
+    color: #bbb; /* Light grey color for text */
+}
+
+@media screen and (max-width: 768px) {
+    .choice-content {
+        flex-direction: column; /* Stack items vertically on small screens */
+    }
+
+    .choice-item {
+        max-width: 100%; /* Make items take full width on small screens */
+        text-align: center;
+    }
+}
+
 
 .footer {
     display: flex;
